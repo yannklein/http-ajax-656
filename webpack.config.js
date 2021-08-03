@@ -10,5 +10,14 @@ module.exports = {
   devServer: {
     publicPath: '/dist/'
   },
-  devtool: "sourcemap"
+  devtool: "sourcemap",
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      }
+    ]
+  }
 };
